@@ -3,7 +3,7 @@
 *.dll
 *.so
 *.dylib
-./depbot
+/depbot
 
 # Test binary, build with `go test -c`
 *.test
@@ -13,4 +13,10 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
-./vendor
+
+
+# vendor folder
+vendor
+
+# IDE settings
+.idea
