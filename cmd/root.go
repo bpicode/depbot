@@ -13,6 +13,7 @@ var RootCmd = &cobra.Command{
 func init() {
 	cobra.OnInitialize()
 	RootCmd.PersistentFlags().String("project", "", "project, e.g. github.com/bpicode/depbot")
+	RootCmd.PersistentFlags().String("token", "", "github token")
 	RootCmd.InitDefaultHelpFlag()
 	RootCmd.InitDefaultHelpCmd()
 }
