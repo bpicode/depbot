@@ -159,7 +159,7 @@ func checkoutBranch(ctx *projectCtx) error {
 
 func clone(ctx *projectCtx) error {
 	logrus.Infof("Cloning '%s'", ctx.project)
-	c := ctx.command("git", "clone",
+	c := ctx.command("git", "clone", "--depth=1",
 		fmt.Sprintf("https://%s:%s@%s", ctx.user, ctx.token, ctx.project), ".")
 	return c.Run()
 }
