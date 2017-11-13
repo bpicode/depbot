@@ -180,8 +180,8 @@ func createContext(cmd *cobra.Command, gopath string) (*projectCtx, error) {
 	ctx := new(projectCtx)
 	ctx.gopath = gopath
 
-	ctx.user = "dep-bot"
-	ctx.email = "depbot@yandex.com"
+	ctx.user = cmd.Flag("user").Value.String()
+	ctx.email = cmd.Flag("mail").Value.String()
 
 	project := cmd.Flag("project").Value.String()
 	if project == "" {
@@ -189,7 +189,7 @@ func createContext(cmd *cobra.Command, gopath string) (*projectCtx, error) {
 	}
 	ctx.project = project
 	token := cmd.Flag("token").Value.String()
-	if project == "" {
+	if token == "" {
 		return nil, errors.New("required flag 'token' not set")
 	}
 	ctx.token = token
