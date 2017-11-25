@@ -16,15 +16,16 @@ import (
 )
 
 var prCmd = &cobra.Command{
-	Use:  "pr",
-	RunE: pr,
+	Use:   "update",
+	RunE:  update,
+	Short: "clone, dependencies update and pull request on github",
 }
 
 func init() {
 	RootCmd.AddCommand(prCmd)
 }
 
-func pr(cmd *cobra.Command, _ []string) error {
+func update(cmd *cobra.Command, _ []string) error {
 	tmp, err := ioutil.TempDir("", "depbot")
 	if err != nil {
 		return errors.Wrapf(err, "cannot create temporary directory with prefix '%s'", "depbot")
