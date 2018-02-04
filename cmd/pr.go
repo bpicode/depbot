@@ -90,7 +90,7 @@ func pullRequest(ctx *projectCtx) error {
 	title := "Automatic upgrade of dependencies by depbot"
 	head := fmt.Sprintf("%s:%s", ctx.user, ctx.featurebranch)
 	base := "master"
-	body := "Bot upgrade of dependencies using dep. Please review carefully. I will not answer to review comments."
+	body := "Automatic upgrade of dependencies using `dep`. Please review carefully. I will not answer to review comments, because I am a bot."
 
 	_, _, err := client.PullRequests.Create(context.Background(), ctx.owner, ctx.repo, &github.NewPullRequest{
 		Title: &title,
@@ -134,7 +134,7 @@ func gitCommit(ctx *projectCtx) error {
 		return errors.Wrap(err, "git add --all failed")
 	}
 
-	err = ctx.command("git", "commit", "--message=automatic upgrade of 3rd party dependencies").Run()
+	err = ctx.command("git", "commit", "--message=Upgrade of 3rd party dependencies").Run()
 	return errors.Wrap(err, "git commit failed")
 }
 
