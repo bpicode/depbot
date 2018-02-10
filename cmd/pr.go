@@ -141,11 +141,7 @@ func gitCommit(ctx *projectCtx) error {
 func depUpdate(ctx *projectCtx) error {
 	logrus.Infof("Updating dependencies")
 	err := ctx.command("dep", "ensure", "-update").Run()
-	if err != nil {
-		return errors.Wrap(err, "dep ensure -update failed")
-	}
-	err = ctx.command("dep", "prune").Run()
-	return errors.Wrap(err, "dep prune failed")
+	return errors.Wrap(err, "dep ensure -update failed")
 }
 
 func checkoutBranch(ctx *projectCtx) error {
