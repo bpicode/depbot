@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: bpicode/docker_golang
     working_directory: /root/go/src/github.com/bpicode/depbot
-      steps:
-        - checkout
-        - run: go build
-        - run: go test ./...
+    steps:
+      - checkout
+      - run: go build
+      - run: go test ./...
     branches:
       only: master
 
