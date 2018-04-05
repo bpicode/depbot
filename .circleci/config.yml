@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: bpicode/docker_golang
+    working_directory: /root/go/src/github.com/bpicode/depbot
+      steps:
+        - checkout
+        - run: go build
+        - run: go test ./...
+    branches:
+      only: master
+
+  upgrade_fritzctl_deps:
+    docker:
+      - image: bpicode/docker_golang
+    working_directory: /root/go/src/github.com/bpicode/depbot
+    steps:
+      - checkout
+      - run: go run main.go --project=github.com/bpicode/fritzctl --token=$GITHUB_API_TOKEN
+    branches:
+      only: master
+
+workflows:
+   version: 2
+   scheduled_upgrade_fritzctl_deps:
+     triggers:
+       - schedule:
+           cron: "0 0 1 * *"
+           filters:
+             branches:
+               only:
+                 - master
+     jobs:
+       - upgrade_fritzctl_deps
