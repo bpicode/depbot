@@ -21,7 +21,7 @@ workflows:
   version: 2
   on_commit:
     jobs:
-      - build
+      - build:
           filters:
            branches:
               only:
