@@ -1,4 +1,4 @@
-# depbot
+# depbot [![CircleCI](https://circleci.com/gh/bpicode/depbot.svg?style=svg)](https://circleci.com/gh/bpicode/depbot)
 Depedency upgrade bot
 
 ## Install
