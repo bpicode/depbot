@@ -22,14 +22,14 @@ jobs:
       only: master
 
 workflows:
-   version: 2
-   scheduled_upgrade_fritzctl_deps:
-     triggers:
-       - schedule:
-           cron: "0 0 6 * *"
-           filters:
-             branches:
-               only:
-                 - master
-     jobs:
-       - upgrade_fritzctl_deps
+  version: 2
+  scheduled_upgrade_fritzctl_deps:
+    triggers:
+      - schedule:
+          cron: "0 0 6 * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - upgrade_fritzctl_deps
