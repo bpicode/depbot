@@ -23,6 +23,9 @@ jobs:
 
 workflows:
   version: 2
+  on_commit:
+    jobs:
+      - build 
   scheduled_upgrade_fritzctl_deps:
     triggers:
       - schedule:
