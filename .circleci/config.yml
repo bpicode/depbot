@@ -8,8 +8,6 @@ jobs:
       - checkout
       - run: go build
       - run: go test ./...
-    branches:
-      only: master
 
   upgrade_fritzctl_deps:
     docker:
@@ -18,14 +16,17 @@ jobs:
     steps:
       - checkout
       - run: go run main.go --project=github.com/bpicode/fritzctl --token=$GITHUB_API_TOKEN
-    branches:
-      only: master
 
 workflows:
   version: 2
   on_commit:
     jobs:
-      - build 
+      - build
+          filters:
+           branches:
+              only:
+                - master
+
   scheduled_upgrade_fritzctl_deps:
     triggers:
       - schedule:
