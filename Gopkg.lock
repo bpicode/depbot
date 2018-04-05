@@ -4,20 +4,20 @@
 [[projects]]
   name = "github.com/Sirupsen/logrus"
   packages = ["."]
-  revision = "f006c2ac4710855cf0f916dd6b77acf6b048dc6e"
-  version = "v1.0.3"
+  revision = "c155da19408a8799da419ed3eeb0cb5db0ad5dbc"
+  version = "v1.0.5"
 
 [[projects]]
-  branch = "master"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
-  revision = "1e59b77b52bf8e4b449a57e6f79f21226d571845"
+  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
+  version = "v1.0.0"
 
 [[projects]]
-  branch = "master"
   name = "github.com/google/go-github"
   packages = ["github"]
-  revision = "872b3704ba8e8c5709aa4c9f66f204bb1cf2b135"
+  revision = "e48060a28fac52d0f1cb758bc8b87c07bac4a87d"
+  version = "v15.0.0"
 
 [[projects]]
   branch = "master"
@@ -40,8 +40,8 @@
 [[projects]]
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "7b2c5ac9fc04fc5efafb60700713d4fa609b777b"
-  version = "v0.0.1"
+  revision = "a1f051bc3eba734da4772d60e2d677f47cf93ef4"
+  version = "v0.0.2"
 
 [[projects]]
   name = "github.com/spf13/pflag"
@@ -53,35 +53,52 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "b080dc9a8c480b08e698fb1219160d598526310f"
+  revision = "b2aa35443fbc700ab74c586ae79b81c171851023"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = ["context","context/ctxhttp"]
-  revision = "c7086645de248775cbf2373cf5ca4d2fa664b8c1"
+  packages = [
+    "context",
+    "context/ctxhttp"
+  ]
+  revision = "b3c676e531a6dc479fa1b35ac961c13f5e2b4d2e"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/oauth2"
-  packages = [".","internal"]
-  revision = "f95fa95eaa936d9d87489b15d1d18b97c1ba9c28"
+  packages = [
+    ".",
+    "internal"
+  ]
+  revision = "921ae394b9430ed4fb549668d7b087601bd60a81"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
-  packages = ["unix","windows"]
-  revision = "4ff8c001ce4cc464e644b922325097228fce14d8"
+  packages = [
+    "unix",
+    "windows"
+  ]
+  revision = "1d206c9fa8975fb4cf00df1dc8bf3283dc24ba0e"
 
 [[projects]]
   name = "google.golang.org/appengine"
-  packages = ["internal","internal/base","internal/datastore","internal/log","internal/remote_api","internal/urlfetch","urlfetch"]
+  packages = [
+    "internal",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch"
+  ]
   revision = "150dc57a1b433e64154302bdc40b6bb8aefa313a"
   version = "v1.0.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f92e20272dcf67e1cce2e1ebc0062ded1583ebe7b21cbb13f503dd3df839beff"
+  inputs-digest = "88f0720059f56d59030af321aa575f3e43e10b162ee5e8dac11531bc303d7bf1"
   solver-name = "gps-cdcl"
   solver-version = 1
