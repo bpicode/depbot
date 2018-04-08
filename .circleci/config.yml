@@ -6,6 +6,7 @@ jobs:
     working_directory: /root/go/src/github.com/bpicode/depbot
     steps:
       - checkout
+      - run: go get -u github.com/golang/dep/cmd/dep
       - run: go build
       - run: go test ./...
 
@@ -30,7 +31,7 @@ workflows:
   scheduled_upgrade_fritzctl_deps:
     triggers:
       - schedule:
-          cron: "0 0 8 * *"
+          cron: "0 0 9 * *"
           filters:
             branches:
               only:
