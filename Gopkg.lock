@@ -10,8 +10,8 @@
 [[projects]]
   name = "github.com/golang/protobuf"
   packages = ["proto"]
-  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
-  version = "v1.0.0"
+  revision = "b4deda0973fb4c70b50d226b1af49f3da59f5265"
+  version = "v1.1.0"
 
 [[projects]]
   name = "github.com/google/go-github"
@@ -40,20 +40,20 @@
 [[projects]]
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "a1f051bc3eba734da4772d60e2d677f47cf93ef4"
-  version = "v0.0.2"
+  revision = "ef82de70bb3f60c65fb8eebacbb2d122ef517385"
+  version = "v0.0.3"
 
 [[projects]]
   name = "github.com/spf13/pflag"
   packages = ["."]
-  revision = "e57e3eeb33f795204c1ca35f56c44f83227c6e66"
-  version = "v1.0.0"
+  revision = "583c0c0531f06d5278b7d917446061adc344b5cd"
+  version = "v1.0.1"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "b2aa35443fbc700ab74c586ae79b81c171851023"
+  revision = "7f39a6fea4fe9364fb61e1def6a268a51b4f3a06"
 
 [[projects]]
   branch = "master"
@@ -62,7 +62,7 @@
     "context",
     "context/ctxhttp"
   ]
-  revision = "b3c676e531a6dc479fa1b35ac961c13f5e2b4d2e"
+  revision = "db08ff08e8622530d9ed3a0e8ac279f6d4c02196"
 
 [[projects]]
   branch = "master"
@@ -71,7 +71,7 @@
     ".",
     "internal"
   ]
-  revision = "921ae394b9430ed4fb549668d7b087601bd60a81"
+  revision = "113ce6928c4638e14fd5eba69b9e6ec899d5dd83"
 
 [[projects]]
   branch = "master"
@@ -80,7 +80,7 @@
     "unix",
     "windows"
   ]
-  revision = "1d206c9fa8975fb4cf00df1dc8bf3283dc24ba0e"
+  revision = "fc8bd948cf46f9c7af0f07d34151ce25fe90e477"
 
 [[projects]]
   name = "google.golang.org/appengine"
@@ -93,8 +93,8 @@
     "internal/urlfetch",
     "urlfetch"
   ]
-  revision = "150dc57a1b433e64154302bdc40b6bb8aefa313a"
-  version = "v1.0.0"
+  revision = "b1f26356af11148e710935ed1ac8a7f5702c7612"
+  version = "v1.1.0"
 
 [solve-meta]
   analyzer-name = "dep"
