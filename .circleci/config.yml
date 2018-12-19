@@ -40,7 +40,7 @@ workflows:
   scheduled_upgrade_fritzctl_deps:
     triggers:
       - schedule:
-          cron: "0 0 19 * *"
+          cron: "30 10 19 * *"
           filters:
             branches:
               only:
