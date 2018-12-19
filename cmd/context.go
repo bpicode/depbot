@@ -66,7 +66,7 @@ func createContext(cmd *cobra.Command, gopath string) (*projectCtx, error) {
 		scm: &git{
 			pwd:     pwd,
 			project: project,
-			user:    mail,
+			user:    user,
 			email:   mail,
 			auth:    token,
 			fbranch: branch,
